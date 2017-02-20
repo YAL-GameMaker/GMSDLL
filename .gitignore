@@ -1,0 +1,9 @@
+.vs/
+*/Configs/*/*
+*/extensions/*/*.cpp
+*/extensions/*/*.dll
+*/Release/
+Release/
+*.gmz
+*.sdf
+help.rtf
