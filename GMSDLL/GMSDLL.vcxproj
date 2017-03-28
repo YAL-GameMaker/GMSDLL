@@ -149,6 +149,8 @@ gmxgen "$(SolutionDir)$(AssemblyName).gmx\extensions\$(AssemblyName).extension.g
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -169,6 +171,9 @@ gmxgen "$(SolutionDir)$(AssemblyName).gmx\extensions\$(AssemblyName).extension.g
     </ClCompile>
     <ClCompile Include="GMSDLL.cpp" />
     <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GMSDLL.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
