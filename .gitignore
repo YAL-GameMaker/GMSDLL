@@ -1,9 +1,12 @@
 .vs/
+*/#backups/*
 */Configs/*/*
 */extensions/*/*.cpp
 */extensions/*/*.dll
 */Release/
 Release/
-*.gmz
+export/*.gmez
+export/*.png
+export/*.gmz
 *.sdf
 help.rtf
