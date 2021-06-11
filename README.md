@@ -1,6 +1,6 @@
 # GMSDLL
 
-
+This is a "template" project that I start my GameMaker DLLs from (using [copyre](https://github.com/YAL-Haxe/copyre))!
 
 ## Installing
 
