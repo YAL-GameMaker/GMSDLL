@@ -12,4 +12,3 @@
 
 #define trace(...) { printf("[GMSDLL:%d] ", __LINE__); printf(__VA_ARGS__); printf("\n"); fflush(stdout); }
 
-//
