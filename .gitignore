@@ -3,7 +3,10 @@
 */Configs/*/*
 */extensions/*/*.cpp
 */extensions/*/*.dll
+
+*/Debug/
 */Release/
+Debug/
 Release/
 export/*.gmez
 export/*.png
