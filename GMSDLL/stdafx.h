@@ -12,4 +12,14 @@
 	#include <windows.h>
 #endif
 
+#define _trace // requires user32.lib;Kernel32.lib
+
+#ifdef _trace
+#ifdef _WINDOWS
+void trace(const char* format, ...);
+#else
+#define trace(...) { printf("[GMSDLL:%d] ", __LINE__); printf(__VA_ARGS__); printf("\n"); fflush(stdout); }
+#endif
+#endif
+
 // TODO: reference additional headers your program requires here
