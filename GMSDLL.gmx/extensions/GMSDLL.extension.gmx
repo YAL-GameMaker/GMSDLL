@@ -29,7 +29,9 @@
     </Config>
   </ConfigOptions>
   <androidPermissions/>
-  <IncludedResources/>
+  <IncludedResources>
+    <Resource>Included Files\GMSDLL.html</Resource>
+  </IncludedResources>
   <files>
     <file>
       <filename>GMSDLL.dll</filename>
@@ -50,6 +52,22 @@
     <file>
       <filename>GMSDLL.gml</filename>
       <origname>extensions\gml.gml</origname>
+      <init></init>
+      <final></final>
+      <kind>2</kind>
+      <uncompress>0</uncompress>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <ProxyFiles/>
+      <functions/>
+      <constants/>
+    </file>
+    <file>
+      <filename>autogen.gml</filename>
+      <origname>extensions\autogen.gml</origname>
       <init></init>
       <final></final>
       <kind>2</kind>

@@ -98,6 +98,9 @@
     <PostBuildEvent>
       <Command>cmd /C postBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cmd /C preBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -114,6 +117,9 @@
     <PostBuildEvent>
       <Command>cmd /C postBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cmd /C preBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -146,6 +152,9 @@
     <PostBuildEvent>
       <Command>cmd /C postBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cmd /C preBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -179,18 +188,27 @@
     <PostBuildEvent>
       <Command>cmd /C postBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>cmd /C preBuild.bat "$(TargetPath)" "$(SolutionDir)" "$(ProjectDir)" "$(PlatformTarget)" "$(ConfigurationName)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="gml_ext.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="autogen.cpp" />
     <ClCompile Include="GMSDLL.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GMSDLL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="postBuild.bat" />
+    <None Include="preBuild.bat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

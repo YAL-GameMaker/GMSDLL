@@ -16,8 +16,27 @@
   "androidProps": true,
   "installdir": "",
   "files": [
-    {"filename":"GMSDLL.dll","origname":"extensions\\GMSDLL.dll","init":"","final":"","kind":1,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
-    {"filename":"GMSDLL.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[],"constants":[],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"GMSDLL.dll","origname":"extensions\\GMSDLL.dll","init":"","final":"","kind":1,"uncompress":false,"functions":[
+        
+      ],"constants":[
+        
+      ],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
+        
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"GMSDLL.gml","origname":"extensions\\gml.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
+        
+      ],"constants":[
+        
+      ],"ProxyFiles":[],"copyToTargets":9223372036854775807,"order":[
+        
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
+    {"filename":"autogen.gml","origname":"extensions\\autogen.gml","init":"","final":"","kind":2,"uncompress":false,"functions":[
+        
+      ],"constants":[
+        
+      ],"ProxyFiles":[],"copyToTargets":-1,"order":[
+        
+      ],"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMExtensionFile",},
   ],
   "classname": "",
   "tvosclassname": "",

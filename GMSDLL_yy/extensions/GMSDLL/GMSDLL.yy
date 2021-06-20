@@ -70,6 +70,30 @@
             ],
             "origname": "extensions\\gml.gml",
             "uncompress": false
+        },
+        {
+            "id": "962d9a80-fb98-4072-93ea-c79e5ae6f0f4",
+            "modelName": "GMExtensionFile",
+            "mvc": "1.0",
+            "ProxyFiles": [
+                
+            ],
+            "constants": [
+                
+            ],
+            "copyToTargets": -1,
+            "filename": "autogen.gml",
+            "final": "",
+            "functions": [
+                
+            ],
+            "init": "",
+            "kind": 2,
+            "order": [
+                
+            ],
+            "origname": "extensions\\autogen.gml",
+            "uncompress": false
         }
     ],
     "gradleinject": "",

@@ -39,11 +39,35 @@
             }
         },
         {
+            "Key": "10164033-e043-42e8-a38b-fe3498227133",
+            "Value": {
+                "id": "d5b38c94-0eaa-4c2d-bb9f-1318536c1772",
+                "resourcePath": "datafiles_yy\\GMSDLL.html.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1a1012ca-9702-4cd0-870a-3101ca12fddb",
             "Value": {
                 "id": "bfd0da8f-b556-4257-b249-1d663bbb4642",
                 "resourcePath": "views\\1a1012ca-9702-4cd0-870a-3101ca12fddb.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3a5af38c-757d-41ae-98c0-5d4b09e14e6a",
+            "Value": {
+                "id": "879ad943-3c50-454c-b6f0-2f4d45cb03fd",
+                "resourcePath": "options\\switch\\options_switch.yy",
+                "resourceType": "GMSwitchOptions"
+            }
+        },
+        {
+            "Key": "3a5af38c-757d-44ae-98c0-5d4b09e14e6a",
+            "Value": {
+                "id": "7973509d-8a63-4446-ab6f-40c303ea1cb7",
+                "resourcePath": "options\\ps4\\options_ps4.yy",
+                "resourceType": "GMPS4Options"
             }
         },
         {
@@ -84,6 +108,14 @@
                 "id": "1d0c9ed3-f4a7-4945-b717-197c8b979822",
                 "resourcePath": "options\\html5\\options_html5.yy",
                 "resourceType": "GMHtml5Options"
+            }
+        },
+        {
+            "Key": "7e093a2a-e51c-4a1e-9a53-f9080d38730b",
+            "Value": {
+                "id": "201f9ec0-e9a0-4bce-a2d4-15909daef0d7",
+                "resourcePath": "options\\windowsuap\\options_windowsuap.yy",
+                "resourceType": "GMWindowsUAPOptions"
             }
         },
         {
@@ -252,6 +284,14 @@
                 "id": "1cf6315f-4b3f-4ce6-b0ac-c1600e4d26bf",
                 "resourcePath": "views\\f664cd6f-a19b-470a-8b94-844b0367b313.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f85efd3d-bcec-4ec0-8226-da808afda79d",
+            "Value": {
+                "id": "045725d4-ca9e-45dc-91a1-3f9454af5ba9",
+                "resourcePath": "options\\xboxone\\options_xboxone.yy",
+                "resourceType": "GMXBoxOneOptions"
             }
         },
         {
