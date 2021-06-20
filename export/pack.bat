@@ -1,5 +1,6 @@
 @echo off
 
+if not exist "GMSDLL-for-GMS1" mkdir "GMSDLL-for-GMS1"
 cmd /C copyre ..\GMSDLL.gmx\extensions\GMSDLL.extension.gmx GMSDLL-for-GMS1\GMSDLL.extension.gmx
 cmd /C copyre ..\GMSDLL.gmx\extensions\GMSDLL GMSDLL-for-GMS1\GMSDLL
 cmd /C copyre ..\GMSDLL.gmx\datafiles\GMSDLL.html GMSDLL-for-GMS1\GMSDLL\Assets\datafiles\GMSDLL.html
