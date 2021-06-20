@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "10164033-e043-42e8-a38b-fe3498227133",
+            "Value": {
+                "id": "d5b38c94-0eaa-4c2d-bb9f-1318536c1772",
+                "resourcePath": "datafiles_yy\\GMSDLL.html.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "1a1012ca-9702-4cd0-870a-3101ca12fddb",
             "Value": {
                 "id": "bfd0da8f-b556-4257-b249-1d663bbb4642",

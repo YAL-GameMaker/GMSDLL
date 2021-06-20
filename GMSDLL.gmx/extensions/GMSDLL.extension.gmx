@@ -29,7 +29,9 @@
     </Config>
   </ConfigOptions>
   <androidPermissions/>
-  <IncludedResources/>
+  <IncludedResources>
+    <Resource>Included Files\GMSDLL.html</Resource>
+  </IncludedResources>
   <files>
     <file>
       <filename>GMSDLL.dll</filename>
