@@ -1,15 +1,33 @@
+// GUIDs in SLN:
 8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942
-${NEW_GUID}
-EA16C6EF-C7F3-42BC-A4AC-EBEE2E84C450
 ${NEW_GUID}
 8FCBDF72-1C64-42B3-B970-F6A254875BD6
 ${NEW_GUID}
 
+// GUID in VCXPROJ:
+EA16C6EF-C7F3-42BC-A4AC-EBEE2E84C450
+${NEW_GUID}
+
+// 2.2 extension resource:
 897059ab-6c2a-4b63-a648-db09480cff45
 ${new_guid}
+
+// 2.2 extension files:
+bac80d6c-a2e2-445c-9d9d-6141adb131a5
+${new_guid}
+7cc73678-e3b5-432b-8372-a1d5779ceb4b
+${new_guid}
+962d9a80-fb98-4072-93ea-c79e5ae6f0f4
+${new_guid}
+
+// 2.2 font:
 0d4750bc-6197-43c6-8956-adcdff830b6c
 ${new_guid}
+
+// 2.2 room:
 f2f14825-8ed5-4360-b1c5-8f3beb48fb0b
 ${new_guid}
+
+// 2.2 datafile:
 10164033-e043-42e8-a38b-fe3498227133
 ${new_guid}
