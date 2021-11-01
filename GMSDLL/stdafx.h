@@ -21,6 +21,8 @@
 #endif
 
 #define _trace // requires user32.lib;Kernel32.lib
+//#define tiny_memset
+//#define tiny_malloc
 
 #ifdef _trace
 #ifdef _WINDOWS

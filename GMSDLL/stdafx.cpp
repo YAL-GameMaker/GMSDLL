@@ -29,3 +29,31 @@ void trace(const char* pszFormat, ...) {
 }
 #endif
 #endif
+
+#pragma warning(disable: 28251 28252)
+
+#ifdef tiny_memset
+#pragma function(memset)
+void* __cdecl memset(void* _Dst, _In_ int _Val,_In_ size_t _Size) {
+	auto ptr = static_cast<uint8_t*>(_Dst);
+	while (_Size) {
+		*ptr++ = _Val;
+		_Size--;
+	}
+	return _Dst;
+}
+#endif
+
+#ifdef tiny_malloc
+void* __cdecl malloc(size_t _Size) {
+	return HeapAlloc(GetProcessHeap(), 0, _Size);
+}
+void* __cdecl realloc(void* _Block, size_t _Size) {
+	return HeapReAlloc(GetProcessHeap(), 0, _Block, _Size);
+}
+void __cdecl free(void* _Block) {
+	HeapFree(GetProcessHeap(), 0, _Block);
+}
+#endif
+
+#pragma warning(default: 28251 28252)
