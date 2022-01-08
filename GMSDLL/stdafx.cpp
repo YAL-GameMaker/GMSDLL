@@ -44,6 +44,16 @@ void* __cdecl memset(void* _Dst, _In_ int _Val,_In_ size_t _Size) {
 }
 #endif
 
+#ifdef tiny_memcpy
+#pragma function(memcpy)
+void* memcpy(void* _Dst, const void* _Src, size_t _Size) {
+	auto src = static_cast<const uint8_t*>(_Src);
+	auto dst = static_cast<uint8_t*>(_Dst);
+	for (; _Size != 0; _Size--) *dst++ = *src++;
+	return _Dst;
+}
+#endif
+
 #ifdef tiny_malloc
 void* __cdecl malloc(size_t _Size) {
 	return HeapAlloc(GetProcessHeap(), 0, _Size);
