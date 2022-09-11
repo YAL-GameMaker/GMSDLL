@@ -28,6 +28,7 @@
 //#define tiny_memset
 //#define tiny_memcpy
 //#define tiny_malloc
+//#define tiny_dtoui3
 
 #ifdef _trace
 #ifdef _WINDOWS
