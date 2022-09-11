@@ -47,9 +47,19 @@ void* __cdecl memset(void* _Dst, _In_ int _Val,_In_ size_t _Size) {
 #ifdef tiny_memcpy
 #pragma function(memcpy)
 void* memcpy(void* _Dst, const void* _Src, size_t _Size) {
-	auto src = static_cast<const uint8_t*>(_Src);
-	auto dst = static_cast<uint8_t*>(_Dst);
-	for (; _Size != 0; _Size--) *dst++ = *src++;
+	auto src8 = static_cast<const uint64_t*>(_Src);
+	auto dst8 = static_cast<uint64_t*>(_Dst);
+	for (; _Size > 32; _Size -= 32) {
+		*dst8++ = *src8++;
+		*dst8++ = *src8++;
+		*dst8++ = *src8++;
+		*dst8++ = *src8++;
+	}
+	for (; _Size > 8; _Size -= 8) *dst8++ = *src8++;
+	//
+	auto src1 = (const uint8_t*)(src8);
+	auto dst1 = (uint8_t*)(dst8);
+	for (; _Size != 0; _Size--) *dst1++ = *src1++;
 	return _Dst;
 }
 #endif
