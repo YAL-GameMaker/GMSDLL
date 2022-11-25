@@ -19,16 +19,17 @@ extern "C" int _fltused = 0;
 #ifdef _WINDOWS
 // https://yal.cc/printf-without-standard-library/
 void trace(const char* pszFormat, ...) {
-	char buf[1025];
+	char buf[1024 + sizeof(trace_prefix)];
+	wsprintfA(buf, "%s", trace_prefix);
 	va_list argList;
 	va_start(argList, pszFormat);
-	wvsprintfA(buf, pszFormat, argList);
+	wvsprintfA(buf + sizeof(trace_prefix) - 1, pszFormat, argList);
 	va_end(argList);
 	DWORD done;
 	auto len = strlen(buf);
 	buf[len] = '\n';
 	buf[++len] = 0;
-	WriteFile(GetStdHandle(STD_OUTPUT_HANDLE), buf, len, &done, NULL);
+	WriteFile(GetStdHandle(STD_OUTPUT_HANDLE), buf, (DWORD)len, &done, NULL);
 }
 #endif
 #endif

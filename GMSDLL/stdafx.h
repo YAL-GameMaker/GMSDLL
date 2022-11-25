@@ -25,16 +25,20 @@
 #endif
 
 #define _trace // requires user32.lib;Kernel32.lib
+
+#ifdef TINY // common things to implement
 //#define tiny_memset
 //#define tiny_memcpy
 //#define tiny_malloc
 //#define tiny_dtoui3
+#endif
 
 #ifdef _trace
+static constexpr char trace_prefix[] = "[GMSDLL] ";
 #ifdef _WINDOWS
 void trace(const char* format, ...);
 #else
-#define trace(...) { printf("[GMSDLL:%d] ", __LINE__); printf(__VA_ARGS__); printf("\n"); fflush(stdout); }
+#define trace(...) { printf("%s", trace_prefix); printf(__VA_ARGS__); printf("\n"); fflush(stdout); }
 #endif
 #endif
 
