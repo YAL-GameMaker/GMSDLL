@@ -2,12 +2,10 @@
 
 #include "stdafx.h"
 
+static inline void init() {
+	//
+}
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
-	/*switch (ul_reason_for_call) {
-		case DLL_PROCESS_ATTACH:
-		case DLL_PROCESS_DETACH:
-		case DLL_THREAD_ATTACH:
-		case DLL_THREAD_DETACH:
-	}*/
+	if (ul_reason_for_call == DLL_PROCESS_ATTACH) init();
 	return TRUE;
 }

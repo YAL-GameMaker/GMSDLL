@@ -16,6 +16,9 @@
     <Filter Include="Build scripts">
       <UniqueIdentifier>{9a9fbe1a-e106-412a-839c-4a270587c3d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tiny">
+      <UniqueIdentifier>{2e7ff73e-4df8-47a7-9e87-add34de90796}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -35,14 +38,26 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GMSDLL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="autogen.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_trace.cpp">
+      <Filter>Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_init_cleanup.cpp">
+      <Filter>Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_malloc.cpp">
+      <Filter>Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_memcpy.cpp">
+      <Filter>Tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_misc.cpp">
+      <Filter>Tiny</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

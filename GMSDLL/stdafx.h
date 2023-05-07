@@ -5,6 +5,21 @@
 
 #pragma once
 
+#pragma region configuration
+
+#define _trace // requires user32.lib;Kernel32.lib
+
+#ifdef TINY // common things to implement
+//#define tiny_memset
+//#define tiny_memcpy
+//#define tiny_malloc // malloc, realloc, free
+//#define tiny_new // new, new[], delete, delete[] - requires tiny_malloc
+//#define tiny_init_cleanup // static init, cleanup, atexit
+//#define tiny_dtoui3
+#endif
+
+#pragma endregion
+
 #ifdef _WINDOWS
 	#include "targetver.h"
 	
@@ -24,18 +39,12 @@
 #define dllx extern "C"
 #endif
 
-#define _trace // requires user32.lib;Kernel32.lib
-
-#ifdef TINY // common things to implement
-//#define tiny_memset
-//#define tiny_memcpy
-//#define tiny_malloc
-//#define tiny_dtoui3
-#endif
+void tiny_init();
+void tiny_cleanup();
 
 #ifdef _trace
 static constexpr char trace_prefix[] = "[GMSDLL] ";
-#ifdef _WINDOWS
+#ifdef TINY
 void trace(const char* format, ...);
 #else
 #define trace(...) { printf("%s", trace_prefix); printf(__VA_ARGS__); printf("\n"); fflush(stdout); }
