@@ -1,4 +1,6 @@
 #pragma once
+#include "stdafx.h"
+#define gml_ext_h
 #include <vector>
 #if ((defined(_MSVC_LANG) && _MSVC_LANG >= 201703L) || __cplusplus >= 201703L)
 #include <optional>
@@ -81,6 +83,16 @@ public:
 		pos += sizeof(T) * n;
 		return vec;
 	}
+	#ifdef tiny_array_h
+	template<class T> tiny_const_array<T> read_tiny_const_array() {
+		static_assert(std::is_trivially_copyable_v<T>, "T must be trivially copyable to be read");
+		auto n = read<uint32_t>();
+		tiny_const_array<T> arr((T*)pos, sizeof(T));
+		pos += sizeof(T) * n;
+		return arr;
+	}
+	#endif
+	
 	std::vector<const char*> read_string_vector() {
 		auto n = read<uint32_t>();
 		std::vector<const char*> vec(n);
@@ -96,6 +108,14 @@ public:
 		auto _tell = read<int32_t>();
 		return gml_buffer(_data, _size, _tell);
 	}
+
+	#ifdef tiny_optional_h
+	template<class T> tiny_optional<T> read_tiny_optional() {
+		if (read<bool>()) {
+			return read<T>;
+		} else return {};
+	}
+	#endif
 
 	#pragma region Tuples
 	#if ((defined(_MSVC_LANG) && _MSVC_LANG >= 201703L) || __cplusplus >= 201703L)
@@ -164,6 +184,23 @@ public:
 		pos += n * sizeof(T);
 	}
 
+	#ifdef tiny_array_h
+	template<class T> void write_tiny_array(tiny_array<T>& arr) {
+		static_assert(std::is_trivially_copyable_v<T>, "T must be trivially copyable to be write");
+		auto n = arr.size();
+		write<uint32_t>(n);
+		memcpy(pos, arr.data(), n * sizeof(T));
+		pos += n * sizeof(T);
+	}
+	template<class T> void write_tiny_const_array(tiny_const_array<T>& arr) {
+		static_assert(std::is_trivially_copyable_v<T>, "T must be trivially copyable to be write");
+		auto n = arr.size();
+		write<uint32_t>(n);
+		memcpy(pos, arr.data(), n * sizeof(T));
+		pos += n * sizeof(T);
+	}
+	#endif
+	
 	void write_string_vector(std::vector<const char*> vec) {
 		auto n = vec.size();
 		write<uint32_t>((uint32_t)n);
@@ -171,6 +208,14 @@ public:
 			write_string(vec[i]);
 		}
 	}
+
+	#ifdef tiny_optional_h
+	template<typename T> void write_tiny_optional(tiny_optional<T>& val) {
+		auto hasValue = val.has_value();
+		write<bool>(hasValue);
+		if (hasValue) write<T>(val.value());
+	}
+	#endif
 
 	#if ((defined(_MSVC_LANG) && _MSVC_LANG >= 201703L) || __cplusplus >= 201703L)
 	template<typename... Args>
