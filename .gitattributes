@@ -1,1 +1,5 @@
 *.yy linguist-language=Game Maker Language
+*.h linguist-language=C++
+*.html linguist-vendored
+*.yy linguist-vendored
+*/extensions/*/autogen.gml linguist-vendored
