@@ -24,30 +24,6 @@
     "extensionName": "",
     "files": [
         {
-            "id": "bac80d6c-a2e2-445c-9d9d-6141adb131a5",
-            "modelName": "GMExtensionFile",
-            "mvc": "1.0",
-            "ProxyFiles": [
-                
-            ],
-            "constants": [
-                
-            ],
-            "copyToTargets": 9223372036854775807,
-            "filename": "GMSDLL.dll",
-            "final": "",
-            "functions": [
-                
-            ],
-            "init": "",
-            "kind": 1,
-            "order": [
-                
-            ],
-            "origname": "extensions\\GMSDLL.dll",
-            "uncompress": false
-        },
-        {
             "id": "7cc73678-e3b5-432b-8372-a1d5779ceb4b",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
@@ -72,7 +48,7 @@
             "uncompress": false
         },
         {
-            "id": "962d9a80-fb98-4072-93ea-c79e5ae6f0f4",
+            "id": "5bfe710d-8d5b-4d10-8c8a-7ade8873027e",
             "modelName": "GMExtensionFile",
             "mvc": "1.0",
             "ProxyFiles": [
@@ -82,17 +58,17 @@
                 
             ],
             "copyToTargets": -1,
-            "filename": "autogen.gml",
+            "filename": "GMSDLL.js",
             "final": "",
             "functions": [
                 
             ],
             "init": "",
-            "kind": 2,
+            "kind": 5,
             "order": [
                 
             ],
-            "origname": "extensions\\autogen.gml",
+            "origname": "",
             "uncompress": false
         }
     ],
